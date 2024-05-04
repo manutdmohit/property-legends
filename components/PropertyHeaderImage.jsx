@@ -1,13 +1,16 @@
 import Image from 'next/image';
 
 const PropertyHeaderImage = ({ image }) => {
-  console.log(image);
   return (
     <section>
       <div className="container-xl m-auto">
         <div className="grid grid-cols-1">
           <Image
-            src={`/images/properties/${image}`}
+            src={
+              image && !image.startsWith('https')
+                ? `/images/properties/${image}`
+                : image
+            }
             alt="property header image"
             className="object-cover h-[400px] w-full"
             width={0}

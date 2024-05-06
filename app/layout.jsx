@@ -2,7 +2,10 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import AuthProvider from '@/components/AuthProvider';
 
-import '../assets/styles/globals.css';
+import '@/assets/styles/globals.css';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: 'Property Legends | Find The Perfect Rental',
@@ -18,6 +21,7 @@ const MainLayout = ({ children }) => {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <ToastContainer />
         </body>
       </html>
     </AuthProvider>

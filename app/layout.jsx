@@ -7,6 +7,8 @@ import '@/assets/styles/globals.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { GlobalProvider } from '@/context/GlobalContext';
+
 export const metadata = {
   title: 'Property Legends | Find The Perfect Rental',
   description: 'Find your dream rental property',
@@ -15,16 +17,20 @@ export const metadata = {
 
 const MainLayout = ({ children }) => {
   return (
-    <AuthProvider>
-      <html lang="en">
-        <body>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <ToastContainer />
-        </body>
-      </html>
-    </AuthProvider>
+    <GlobalProvider>
+      <AuthProvider>
+        <html lang="en">
+          <body>
+            <div className="min-h-screen flex flex-col">
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+              <ToastContainer />
+            </div>
+          </body>
+        </html>
+      </AuthProvider>
+    </GlobalProvider>
   );
 };
 

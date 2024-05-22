@@ -9,7 +9,7 @@ const HomeProperties = async () => {
   // const recentProperties = data.properties
   //   .sort(() => Math.random() - Math.random())
   //   .slice(0, 3);
-  const data = [];
+  const recentProperties = [];
 
   return (
     <>

@@ -2,10 +2,11 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import AuthProvider from '@/components/AuthProvider';
 
+import 'react-toastify/dist/ReactToastify.css';
 import '@/assets/styles/globals.css';
+import 'photoswipe/dist/photoswipe.css';
 
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 import { GlobalProvider } from '@/context/GlobalContext';
 
